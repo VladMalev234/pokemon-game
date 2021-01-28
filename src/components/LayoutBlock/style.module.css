@@ -1,0 +1,108 @@
+
+#first {
+    background-image: url('https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e4337cf5-3f3b-4436-b045-8aff91da2cac/bg1.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210128T202339Z&X-Amz-Expires=86400&X-Amz-Signature=b0e1c731c017742c758c0fea22808ef87b2eae459fc7ff404968d0ef889975ea&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg1.jpg%22');
+}
+
+#second {
+    background-image:green;
+}
+#third {
+    background-image: url('https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3e62948f-bef9-4af8-b2f6-c0a97abc27a7/bg3.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210128%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210128T204425Z&X-Amz-Expires=86400&X-Amz-Signature=f4e423e96d21996dd243c9ea25d53f5c23d91a69f539a7fb11f9ce33c38d33a5&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22bg3.jpg%22');
+
+}
+
+.root {
+    height: 100%;
+    min-height: 100vh;
+    font-size: 1.4rem;
+    position: relative;
+    background: #fafafa;
+    clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
+    z-index: 5;
+    background-attachment: fixed;
+}
+
+.root .wrapper {
+    padding: 15rem 10rem 12rem;
+    height: 100%;
+    min-height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.root article {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    padding: 3rem 0;
+}
+
+.root .title {
+    grid-column-end: span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.root .title h3 {
+    font-size: 2.4rem;
+}
+
+.root .separator {
+    background: #f300b4;
+    width: 150px;
+    height: 2px;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.root .subtitle {
+    font-size: 1.6rem;
+    text-align: center;
+    color: inherit;
+    padding-bottom: 1.5rem;
+}
+
+.root p {
+    padding-bottom: 1.5rem;
+    color: #555;
+    line-height: 1.9rem;
+}
+
+.root .desc.full {
+    grid-column-end: span 4;
+    margin-bottom: 2rem;
+}
+
+.root .desc {
+    grid-column-end: span 2;
+    background: #ffffffaa;
+    padding: 2rem;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 1149px) {
+    .root article {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+    .root .desc.full {
+        grid-column-end: -1;
+    }
+
+    .root .desc {
+        grid-column-end: -1;
+    }
+}
+@media only screen and (max-width: 949px) {
+    .root {
+        clip-path: polygon(0 0, 20% 2%, 100% 0, 100% 100%, 80% 98%, 0 100%);
+        background-position: top left;
+        background-size: cover;
+    }
+}
+@media only screen and (max-width: 649px) {
+    .root .wrapper {
+        padding: 10rem 2rem 8rem;
+    }
+}
